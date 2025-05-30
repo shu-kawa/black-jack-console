@@ -5,6 +5,7 @@ import net.hollage.player.Dealer;
 import net.hollage.player.Participant;
 import net.hollage.player.Player;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class BlackJack {
@@ -32,7 +33,7 @@ public class BlackJack {
         player.addCard(deck.deal());
         System.out.println("player: " + player.showAllCards());
         try (
-                Scanner scanner = new Scanner(System.in)) {
+                Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8)) {
             while (player.canHit()) {
                 System.out.println("do you want to hit or stand?");
                 System.out.println("your score: " + player.getHandScore());

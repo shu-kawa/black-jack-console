@@ -27,15 +27,6 @@ public abstract class Participant {
     }
 
     /**
-     * 手札の枚数を返す.
-     *
-     * @return 所持枚数
-     */
-    public int size() {
-        return cards.size();
-    }
-
-    /**
      * 手札をすべて開示する.
      *
      * @return 全ての手札の文字列

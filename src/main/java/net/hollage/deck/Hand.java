@@ -46,7 +46,7 @@ public class Hand {
         if (cards.size() != 2) {
             return false;
         }
-        boolean hasAce = cards.stream().anyMatch(card -> card.isAce());
+        boolean hasAce = cards.stream().anyMatch(Card::isAce);
         boolean hasTen = cards.stream().anyMatch(card -> card.getNum() >= 10);
         return (hasAce && hasTen);
     }
@@ -70,7 +70,7 @@ public class Hand {
             }
         }
         // Aの枚数をカウントして、バースト値を下回るまで減算
-        long aceNum = cards.stream().filter(card -> card.isAce()).count();
+        long aceNum = cards.stream().filter(Card::isAce).count();
         while (NORMAL_HAND_MAX_SCORE < score && 0 < aceNum) {
             aceNum -= 1;
             score -= 10;

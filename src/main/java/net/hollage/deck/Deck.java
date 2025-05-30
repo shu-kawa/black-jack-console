@@ -59,13 +59,4 @@ public class Deck {
         }
         return cards.removeFirst();
     }
-
-    /**
-     * デッキの残り枚数を返す.
-     *
-     * @return デッキの残り枚数
-     */
-    public int size() {
-        return cards.size();
-    }
 }

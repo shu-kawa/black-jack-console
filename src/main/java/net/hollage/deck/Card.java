@@ -53,10 +53,7 @@ public class Card {
      * @return トランプの点数
      */
     public int getScore() {
-        if (this.num >= 10) {
-            return 10;
-        }
-        return this.num;
+        return Math.min(10, this.num);
     }
 
     /**

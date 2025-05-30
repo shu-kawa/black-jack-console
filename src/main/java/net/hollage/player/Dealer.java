@@ -12,10 +12,8 @@ public class Dealer extends Participant {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(cards.get(0).getString());
-        for (int i = 1; i < cards.size(); i++) {
-            sb.append(", ???");
-        }
+        sb.append(cards.getFirst().getString());
+        sb.repeat("???", cards.size() - 1);
         return sb.toString();
     }
 
