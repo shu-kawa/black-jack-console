@@ -16,5 +16,6 @@ public interface PrinterService {
      * @param message 出力したいメッセージ
      * @param args    出力するメッセージに埋め込む引数
      */
+    @SuppressWarnings("PMD.UnusedFormalParameter")
     void print(String message, Object... args);
 }
