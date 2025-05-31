@@ -27,3 +27,7 @@ IntelliJ IDEA 2025.1.1.1 (Community Edition)
 * [ ] ビジネスロジックの修正  
   単一責任の原則を逸脱したクラスがある  
   `Participant#getHandScore`と`Participant#isBust`とか大丈夫？？
+
+## 補足
+
+ルール説明やパッケージ構成のリファクタリングなどに無料プランのChatGPTを利用しています。

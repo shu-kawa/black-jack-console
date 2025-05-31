@@ -1,4 +1,4 @@
-package net.hollage.deck;
+package net.hollage.card;
 
 import java.util.List;
 

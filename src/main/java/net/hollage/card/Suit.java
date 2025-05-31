@@ -1,4 +1,4 @@
-package net.hollage.deck;
+package net.hollage.card;
 
 /** トランプの記号列挙型クラス. */
 public enum Suit {

@@ -1,6 +1,6 @@
 package net.hollage.player;
 
-import net.hollage.deck.Hand;
+import net.hollage.card.Hand;
 
 /** ディーラークラス. */
 public class Dealer extends Participant {

@@ -1,4 +1,4 @@
-package net.hollage.deck;
+package net.hollage.card;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,7 +32,7 @@ public class Deck {
     }
 
     /** デッキを初期化する. */
-    public Deck init() {
+    protected void init() {
         for (int i = 1; i <= KIND_OF_SUIT; i++) {
             cards.add(new Card(Suit.HEARTS, i));
             cards.add(new Card(Suit.SPADES, i));
@@ -40,7 +40,6 @@ public class Deck {
             cards.add(new Card(Suit.CLUBS, i));
         }
         this.shuffle();
-        return this;
     }
 
     /** デッキをシャッフルする. */

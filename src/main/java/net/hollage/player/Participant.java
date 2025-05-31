@@ -1,12 +1,12 @@
 package net.hollage.player;
 
-import net.hollage.deck.Card;
-import net.hollage.deck.Hand;
+import net.hollage.card.Card;
+import net.hollage.card.Hand;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/** ゲームの参加者の抽象クラス. */
+/** ゲームの参加者の基底クラス. */
 public abstract class Participant {
 
     /** カードリスト */
