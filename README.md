@@ -8,7 +8,7 @@
 Windows 11 64bit  
 Amazon Corretto 21.0.6  
 Gradle 8.13  
-IntelliJ IDEA 2025.1.1.1 (Community Edition)
+IntelliJ IDEA 2025.1.2 (Community Edition)  
 
 ## 動作方法
 

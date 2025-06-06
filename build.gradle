@@ -5,6 +5,10 @@ plugins {
 group = 'net.hollage'
 version = '0.0.5'
 
+application {
+    mainClass = 'net.hollage.app.BlackJack'
+}
+
 repositories {
     mavenCentral()
 }
@@ -16,4 +20,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
 }
