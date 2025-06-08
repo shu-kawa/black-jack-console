@@ -76,16 +76,16 @@ public class DefaultBlackJackRule extends BlackJackRule {
     }
 
     /**
-     * プレイヤーのバーストか、得点が下回っていれば負け
+     * プレイヤーのバーストか、ディーラーがバーストせずに得点が下回っていれば負け.
      *
      * @return true: プレイヤーの負け
      */
     private boolean isLose() {
-        return player.isBust() || (player.getHandScore() < dealer.getHandScore());
+        return player.isBust() || (!dealer.isBust() && (player.getHandScore() < dealer.getHandScore()));
     }
 
     /**
-     * 同点であれば引き分け
+     * 同点であれば引き分け.
      *
      * @return true: 引き分け
      */
