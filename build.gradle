@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'net.hollage'
-version = '0.0.5'
+version = '0.0.6'
 
 application {
     mainClass = 'net.hollage.app.BlackJack'

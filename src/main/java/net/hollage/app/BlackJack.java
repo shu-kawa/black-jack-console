@@ -6,6 +6,7 @@ import net.hollage.player.Player;
 import net.hollage.printer.ConsolePrinter;
 import net.hollage.printer.PrinterService;
 import net.hollage.rule.BlackJackRule;
+import net.hollage.rule.DefaultBlackJackRule;
 
 /** エントリーポイント. */
 public class BlackJack {
@@ -15,7 +16,7 @@ public class BlackJack {
         Participant dealer = new Dealer();
         Participant player = new Player();
         PrinterService printer = new ConsolePrinter();
-        BlackJackRule blackJackRule = new BlackJackRule(dealer, player, printer);
+        BlackJackRule blackJackRule = new DefaultBlackJackRule(dealer, player, printer);
         blackJackRule.play();
     }
 }
