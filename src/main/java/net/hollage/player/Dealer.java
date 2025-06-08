@@ -13,7 +13,7 @@ public class Dealer extends Participant {
 
         StringBuilder sb = new StringBuilder();
         sb.append(cards.getFirst().getString());
-        sb.repeat("???", cards.size() - 1);
+        sb.repeat(", ???", cards.size() - 1);
         return sb.toString();
     }
 
@@ -26,6 +26,6 @@ public class Dealer extends Participant {
     @Override
     public boolean canStand() {
         Hand hand = new Hand(cards);
-        return 17 <= hand.getHandScore();
+        return 17 <= hand.calcScore();
     }
 }

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /** トランプのデッキ. */
-public class Deck {
+public final class Deck {
 
     /** シングルトンインスタンス. */
     private static final Deck instance = new Deck();
@@ -32,7 +32,7 @@ public class Deck {
     }
 
     /** デッキを初期化する. */
-    protected void init() {
+    private void init() {
         for (int i = 1; i <= KIND_OF_SUIT; i++) {
             cards.add(new Card(Suit.HEARTS, i));
             cards.add(new Card(Suit.SPADES, i));

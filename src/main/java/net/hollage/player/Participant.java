@@ -9,12 +9,16 @@ import java.util.List;
 /** ゲームの参加者の基底クラス. */
 public abstract class Participant {
 
+    /** 役判定クラス */
+    protected final Hand hand;
+
     /** カードリスト */
     protected final List<Card> cards;
 
     /** コンストラクタ */
     public Participant() {
         this.cards = new ArrayList<>();
+        this.hand = new Hand(cards);
     }
 
     /**
@@ -53,8 +57,7 @@ public abstract class Participant {
      * @return true: ヒット可能
      */
     public boolean canHit() {
-        Hand hand = new Hand(cards);
-        return !hand.isBust() && hand.getHandScore() < 21;
+        return !hand.isBust() && hand.calcScore() < 21;
     }
 
     /**
@@ -63,8 +66,7 @@ public abstract class Participant {
      * @return 合計点
      */
     public int getHandScore() {
-        Hand hand = new Hand(cards);
-        return hand.getHandScore();
+        return hand.calcScore();
     }
 
     /**
@@ -73,7 +75,6 @@ public abstract class Participant {
      * @return true: バースト, false: バーストではない
      */
     public boolean isBust() {
-        Hand hand = new Hand(cards);
         return hand.isBust();
     }
 
