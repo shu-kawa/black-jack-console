@@ -7,13 +7,13 @@ import net.hollage.printer.PrinterService;
 abstract public class BlackJackRule {
 
     /** ディーラー. */
-    protected final Participant dealer;
+    final Participant dealer;
     /** プレイヤー. */
-    protected final Participant player;
+    final Participant player;
     /** 出力サービス. */
-    protected final PrinterService printer;
+    final PrinterService printer;
     /** デッキ. */
-    protected final Deck deck;
+    final Deck deck;
 
     /**
      * コンストラクタ.
@@ -22,7 +22,7 @@ abstract public class BlackJackRule {
      * @param player  プレイヤー
      * @param printer 出力サービス
      */
-    public BlackJackRule(Participant dealer, Participant player, PrinterService printer) {
+    BlackJackRule(Participant dealer, Participant player, PrinterService printer) {
         this.dealer = dealer;
         this.player = player;
         this.printer = printer;

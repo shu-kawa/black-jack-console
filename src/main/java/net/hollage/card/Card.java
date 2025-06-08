@@ -32,17 +32,8 @@ public class Card {
      *
      * @return true: エースの場合
      */
-    public boolean isAce() {
+    boolean isAce() {
         return this.num == 1;
-    }
-
-    /**
-     * トランプの数値をそのまま返す.
-     *
-     * @return トランプの数値
-     */
-    public int getNum() {
-        return this.num;
     }
 
     /**
@@ -52,7 +43,7 @@ public class Card {
      *
      * @return トランプの点数
      */
-    public int getScore() {
+    int getScore() {
         return Math.min(10, this.num);
     }
 

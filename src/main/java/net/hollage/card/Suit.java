@@ -28,7 +28,7 @@ public enum Suit {
      *
      * @return スートの記号
      */
-    public String getSymbol() {
+    String getSymbol() {
         return symbol;
     }
 }

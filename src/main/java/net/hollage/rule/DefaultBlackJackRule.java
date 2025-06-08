@@ -14,7 +14,7 @@ public class DefaultBlackJackRule extends BlackJackRule {
     }
 
     @Override
-    public void init() {
+    void init() {
         // 配札（ディーラー）
         dealer.addCard(deck.deal());
         dealer.addCard(deck.deal());
@@ -27,7 +27,7 @@ public class DefaultBlackJackRule extends BlackJackRule {
     }
 
     @Override
-    public void playPlayer() {
+    void playPlayer() {
         try (
                 Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8)) {
             while (player.canHit()) {
@@ -48,7 +48,7 @@ public class DefaultBlackJackRule extends BlackJackRule {
     }
 
     @Override
-    public void playDealer() {
+    void playDealer() {
         while (!dealer.canStand() && !dealer.isBust()) {
             printer.print("dealer: " + dealer.showAllCards());
             printer.print("once more deal...");
@@ -57,7 +57,7 @@ public class DefaultBlackJackRule extends BlackJackRule {
     }
 
     @Override
-    public void checkResult() {
+    void checkResult() {
         if (this.isLose()) {
             printer.print("dealer win...");
         } else if (this.isDraw()) {
@@ -68,7 +68,7 @@ public class DefaultBlackJackRule extends BlackJackRule {
     }
 
     @Override
-    public void displayResult() {
+    void displayResult() {
         printer.print("/_/_/_/_/_/_/_RESULT/_/_/_/_/_/_/_");
         printer.print("player[" + player.getHandScore() + "]: " + player.showAllCards());
         printer.print("dealer[" + dealer.getHandScore() + "]: " + dealer.showAllCards());

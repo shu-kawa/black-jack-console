@@ -43,7 +43,7 @@ public final class Deck {
     }
 
     /** デッキをシャッフルする. */
-    public void shuffle() {
+    private void shuffle() {
         Collections.shuffle(cards);
     }
 
