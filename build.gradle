@@ -1,9 +1,10 @@
 plugins {
     id 'application'
+    id 'jacoco'
 }
 
 group = 'net.hollage'
-version = '0.0.9'
+version = '0.0.10'
 
 application {
     mainClass = 'net.hollage.app.BlackJack'
@@ -20,6 +21,17 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperty "file.encoding", "UTF-8"
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
 }
 
 run {
