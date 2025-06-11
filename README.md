@@ -15,6 +15,17 @@ IntelliJ IDEA 2025.1.2 (Community Edition)
 依存関係を特に作っていないため、IDEの実行ボタンでも動くはず。  
 ダメなら`./gradlew clean build run`でも動きます。  
 
+## TODO
+
+- [ ] Dealerを進化させたDebugDealerクラスの作成  
+→ デバッグ用にでも使えるように、全てのカードをショーダウンする  
+- [ ] Dealerを進化させたInsaneDealerクラスの作成  
+→ deal結果が必ずブラックジャックになるクラス  
+- [ ] ゲームスタート時にディーラーの強さを選べる処理の追加  
+→ DebugDealerやInsaneDealerをユーザー側で注入できるようにする  
+- [ ] 再戦機能の追加  
+優先度は低い  
+
 ## 補足
 
 ルール説明やパッケージ構成のリファクタリングなどに無料プランのChatGPTを利用しています。  
